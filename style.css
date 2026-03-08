@@ -3,16 +3,19 @@ font-family:Arial;
 background:#f2f4f7;
 display:flex;
 justify-content:center;
-align-items:center;
-height:100vh;
+align-items:flex-start;
+min-height:100vh;
+padding:20px;
+box-sizing:border-box;
 transition:0.3s;
 }
 
 .container{
 background:white;
-padding:30px;
+padding:25px;
 border-radius:10px;
-width:550px;
+width:100%;
+max-width:550px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 text-align:center;
 }
@@ -25,8 +28,9 @@ align-items:center;
 
 #dropArea{
 border:2px dashed #4CAF50;
-padding:30px;
+padding:25px;
 margin-top:20px;
+border-radius:8px;
 }
 
 #dropArea.dragover{
@@ -48,10 +52,11 @@ border-radius:5px;
 cursor:pointer;
 }
 
-.preview-section{
-display:flex;
-justify-content:space-between;
-margin-top:20px;
+.preview-section img{
+width:100%;
+max-width:220px;
+border-radius:5px;
+border:1px solid #ddd;
 }
 
 .preview-section img{
@@ -112,4 +117,37 @@ border-color:#8bc34a;
 
 body.dark .progress-container{
 background:#444;
+}
+
+
+
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width:600px){
+
+.top-bar{
+flex-direction:column;
+gap:10px;
+}
+
+.preview-section{
+flex-direction:column;
+gap:20px;
+}
+
+button{
+width:100%;
+}
+
+#selectBtn{
+width:100%;
+}
+
+#downloadBtn{
+display:block;
+width:100%;
+}
+
 }
